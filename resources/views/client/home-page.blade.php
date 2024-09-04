@@ -15,99 +15,210 @@
 @endsection
 
 @section('content')
-
-<!-- Slider -->
-@if ($banners)
-<div class="block">
-    <div id="mainSliderWrapper">
-        <div class="loading-content">
-            <div class="loading-dots dark-gray">
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
+<section class="slider_section">
+    <div class="banner_wrapper">
+        <div class="slider_banner">
+            <div><img src="{{asset('services/images/banner/baner1.jpg')}}" class="img-fluid" alt="Slide 1"></div>
+            <div><img src="{{asset('services/images/banner/banner2.jpg')}}" class="img-fluid" alt="Slide 2"></div>
+        </div>
+        <div class="slider_side_banner">
+            <div class="sliderbanner_text">
+                <div class="slider_text_wrap">
+                    <h5>We've got your numbers</h5>
+                    <h4>Modern House numbers,letters,plaques and signs</h4>
+                    <p>Handcrafted with care just for you</p>
+                    <a href="{{ route('order-page.index') }}" class="estimate_btn">Free Estimate</a>
+                </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <div id="mainSlider">
-            @foreach ($banners as $banner)
-            <div class="slide mask">
-
-                <div class="img--holder" style="background-image: url('images/banner/{{ $banner->image }}');">
+<!-- custom about us start -->
+<Section class="custom_about_us">
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="about_us_content">
+                <div class="about_title text-center">
+                    <h2>About US / <span class="arabic_title">معلومات عنا</span> </h2>
                 </div>
-                <div class="slide-content center">
-                    <div class="vert-wrap container">
-                        <div class="vert">
-                            <div class="container">
-                                <h2 data-animation="zoomIn" data-animation-delay="2s">{{ $banner->first_text }}</h2>
-                                <h3 data-animation="zoomIn" data-animation-delay="3s">{{ $banner->second_text }}</h3>
-                                <a href="{{ route('order-page.index') }}" class="btn" data-animation="fadeInUp"
-                                    data-animation-delay="4s">Free Estimate</a>
+                <div class="about_content">
+                    <p> The One Direction Company brings more than 25 years of expertise in the design, manufacture and
+                        installation of high quality indoor and outdoor Branding, Signage and Retail Display Solutions.
+                        Our quality assurance program includes designing, prototyping and value engineering to meet
+                        budget criteria and produce superior quality products.</p>
+                </div>
+                <div class="about_arabic">
+                    <p>One Direction بأكثر من 25 عامًا من الخبرة في تصميم وتصنيع وتركيب العلامات التجارية واللافتات
+                        وحلول عرض البيع بالتجزئة عالية الجودة داخليًا وخارجيًا. يتضمن برنامج ضمان الجودة لدينا التصميم
+                        والنماذج الأولية وهندسة القيمة لتلبية معايير الميزانية والإنتاج منتجات عالية الجودة."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</Section>
+<!-- custom about us end -->
+
+<!-- custom_service section start -->
+
+<section class="our_services">
+    <div class="container">
+        <div class="custom_sevices_title">
+            <h2>Our services</h2>
+        </div>
+        <div class="custom_services_content">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="custom_services_box">
+                        <div class="imageBox">
+                            <div class="imageInn">
+                                <img src="{{asset('images/service/number_letter1.jpg')}}" alt="Default Image"
+                                    class="img-fluid w-100">
+                            </div>
+                            <div class="hoverImg">
+                                <img src="{{asset('images/service/house_number.jpg')}}" alt="Profile Image"
+                                    class="img-fluid w-100">
+                            </div>
+                            <div class="imagebox_overlay">
+                                <div class="overlay_text">
+                                    <h3>Number + Letters</h3>
+                                    <h4>starting at $24.00</h4>
+                                    <div class="overlay_btn">
+                                        <a class="btn_explor">Explore now</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-4">
+                    <div class="custom_services_box">
+                        <div class="imageBox">
+                            <div class="imageInn">
+                                <img src="{{asset('images/service/homeroll3.jpg')}}" alt="Default Image"
+                                    class="img-fluid w-100">
+                            </div>
+                            <div class="hoverImg">
+                                <img src="{{asset('images/service/homeroll4.jpg')}}" alt="Profile Image"
+                                    class="img-fluid w-100">
+                            </div>
+                            <div class="imagebox_overlay">
+                                <div class="overlay_text">
+                                    <h3>Number + Letters</h3>
+                                    <h4>starting at $24.00</h4>
+                                    <div class="overlay_btn">
+                                        <a class="btn_explor">Explore now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="custom_services_box">
+                        <div class="imageBox">
+                            <div class="imageInn">
+                                <img src="{{asset('images/service/homeroll5.jpg')}}" alt="Default Image"
+                                    class="img-fluid w-100">
+                            </div>
+                            <div class="hoverImg">
+                                <img src="{{asset('images/service/homeroll6.jpg')}}" alt="Profile Image"
+                                    class="img-fluid w-100">
+                            </div>
+                            <div class="imagebox_overlay">
+                                <div class="overlay_text">
+                                    <h3>Number + Letters</h3>
+                                    <h4>starting at $24.00</h4>
+                                    <div class="overlay_btn">
+                                        <a class="btn_explor">Explore now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="custom_services_box">
+                        <div class="imageBox">
+                            <div class="imageInn">
+                                <img src="{{asset('images/service/homeroll7.jpg')}}" alt="Default Image"
+                                    class="img-fluid w-100">
+                            </div>
+                            <div class="hoverImg">
+                                <img src="{{asset('images/service/homeroll8.jpg')}}" alt="Profile Image"
+                                    class="img-fluid w-100">
+                            </div>
+                            <div class="imagebox_overlay">
+                                <div class="overlay_text">
+                                    <h3>Number + Letters</h3>
+                                    <h4>starting at $24.00</h4>
+                                    <div class="overlay_btn">
+                                        <a class="btn_explor">Explore now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="custom_services_box">
+                        <div class="imageBox">
+                            <div class="imageInn">
+                                <img src="{{asset('images/service/homeroll8.jpg')}}" alt="Default Image"
+                                    class="img-fluid w-100">
+                            </div>
+                            <div class="hoverImg">
+                                <img src="{{asset('images/service/homeroll7.jpg')}}" alt="Profile Image"
+                                    class="img-fluid w-100">
+                            </div>
+                            <div class="imagebox_overlay">
+                                <div class="overlay_text">
+                                    <h3>Number + Letters</h3>
+                                    <h4>starting at $24.00</h4>
+                                    <div class="overlay_btn">
+                                        <a class="btn_explor">Explore now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="custom_services_box">
+                        <div class="imageBox">
+                            <div class="imageInn">
+                                <img src="{{asset('images/service/homeroll5.jpg')}}" alt="Default Image"
+                                    class="img-fluid w-100">
+                            </div>
+                            <div class="hoverImg">
+                                <img src="{{asset('images/service/homeroll4.jpg')}}" alt="Profile Image"
+                                    class="img-fluid w-100">
+                            </div>
+                            <div class="imagebox_overlay">
+                                <div class="overlay_text">
+                                    <h3>Number + Letters</h3>
+                                    <h4>starting at $24.00</h4>
+                                    <div class="overlay_btn">
+                                        <a class="btn_explor">Explore now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-
-            @endforeach
         </div>
-    </div>
-</div>
-@endif
-
-<!-- Slider -->
+</section>
+<!-- custom_service section end -->
 
 <!-- services -->
 
-<div class="block">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="text-center h-lg h-decor">Which Service Do You Need?</h2>
-                <div class="text-center max-700">
-                    <p class="p-lg">We have top class experts regarding every services mentioned. Select form
-                        our wide range of services below.</p>
-                </div>
-                <div class=" row">
-                    @if ($services)
-                    @foreach ($services as $service)
-                    <div class="col-lg-4">
-                        <div class="demo_box shadow p-3 mb-5 bg-body-tertiary rounded">
-                            <div class="news-prw-image demo">
-                                <a href="blog-post-page.html">
-                                    <img src="{{ asset('images/service/'.$service->image) }}" alt="">
-                                </a>
-                                <div class="overlay_demo">
-
-                                </div>
-                                
-                            <div class="demo_write">
-                                <h3 style="padding: 0 20px">{{ $service->title }}</h3>
-                                <a href="@if ($service->service_details)
-                                            {{ route('service-page.show',$service->service_details->id) }}
-
-                                        @endif" class="btn btn-default"> View details</a>
-                                       
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                    @endif
-
-                </div>
-                @if ($service_count > 6)
-                <div class="services_btn text-center mt-4">
-                    <a href="{{ route('service-page.index') }}" class="btn btn-default">See More</a>
-                </div>
-                @endif
-
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
 
 <!-- About Us block -->
 <div class="block fullwidth-bg bg-cover inset-lg-3 pb-xs-0 block-1"
@@ -128,7 +239,10 @@
                 </ul>
                 <div class="tab-content tab-content-nopad">
                     <div id="all" class="tab-pane fade in active">
-                        <p>" The One Direction Company brings more than 25 years of expertise in the design, manufacture and installation of high quality indoor and outdoor Branding, Signage and Retail Display Solutions. Our quality assurance program includes designing, prototyping and value engineering to meet budget criteria and produce superior quality products."</p>
+                        <p>" The One Direction Company brings more than 25 years of expertise in the design, manufacture
+                            and installation of high quality indoor and outdoor Branding, Signage and Retail Display
+                            Solutions. Our quality assurance program includes designing, prototyping and value
+                            engineering to meet budget criteria and produce superior quality products."</p>
                     </div>
                     @foreach ($abouts as $about)
                     <div id="{{ $about->id }}" class="tab-pane fade in">
@@ -148,7 +262,7 @@
 </div>
 <!-- /About Us block -->
 <!-- Why choose us Block -->
-<div class="block">
+<!-- <div class="block">
     <div class="container">
         <div class="row row-revert-xs">
             <div class="col-sm-5 col-md-5 col-lg-6">
@@ -189,11 +303,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!--Why chose us block -->
 
 <!-- Prices block  -->
-<div class="block">
+<!-- <div class="block">
     <div class="container">
         <h2 class="text-center h-lg h-decor">Choose Your Pricing Plan</h2>
         <div class="text-center max-800">
@@ -211,7 +325,7 @@
                             <h3 class="prices-box-title" style="color: #04a0dc;">{{ $plan->title }}</h3>
                             <div class="prices-box-price">
                                 <b style="color: #04a0dc;"><sup>&nbsp;&nbsp;$</sup>{{ $plan->price }}</b>
-                                <!-- <sup>95</sup> -->
+                                 <sup>95</sup>
                                 <span>Per Hour</span>
                             </div>
                             {!! $plan->details !!}
@@ -336,7 +450,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- /Prices block -->
 
 <!-- Counter block -->
@@ -383,6 +497,83 @@
 </div>
 <!-- Counter block -->
 
+<!-- custom design test section start -->
+<section class="custom_design_section">
+    <div class="container">
+        <h2>Let's Gets Started</h2>
+        <div class="row">
+            <div class="col">
+                <label for="text-input">Enter Your Text:</label>
+                <input type="text" id="text-input" placeholder="Type your text here">
+            </div>
+            <div class="col">
+                <label for="font-select">Select Your Font</label>
+                <select id="font-select">
+                    <option value="Arial">Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Tahoma">Tahoma</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="size-select">Select Font Size</label>
+                <select id="size-select">
+                    <option value="16">16px</option>
+                    <option value="20">20px</option>
+                    <option value="24">24px</option>
+                    <option value="28">28px</option>
+                    <option value="32">32px</option>
+                    <option value="36">36px</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="color-picker">Select Font Color</label>
+                <input type="color" id="color-picker" value="#000000">
+            </div>
+            <div class="col">
+                <label for="shape-select">Select Shape</label>
+                <select id="shape-select">
+                    <option value="none">None</option>
+                    <option value="circle">Circle</option>
+                    <option value="square">Square</option>
+                    <option value="horizontal">Horizontal</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="box-size-select">Select Box Size</label>
+                <select id="box-size-select">
+                    <option value="35x50">35x50 cm</option>
+                    <option value="40x40">40x40 cm</option>
+                    <option value="25x70">25x70 cm</option>
+                    <option value="50x110">50x110 cm</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="alignment-select">Select Alignment</label>
+                <select id="alignment-select">
+                    <option value="center">Center</option>
+                    <option value="bottom">Bottom</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="contrast-select">Select Contrast Plate</label>
+                <select id="contrast-select">
+                    <option value="none">None</option>
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="preview-box" id="preview-box">
+            <span id="preview-text">Your text preview will appear here</span>
+        </div>
+    </div>
+</section>
+<!-- custom section design end -->
+
 <!-- Testimonials Single Block -->
 <div class="block fullwidth-bg bg-cover block-testimonials-bg inset-lg-1"
     data-bg="{{ asset('services/images/block-bg-3.jpg') }}">
@@ -410,7 +601,7 @@
 <!--/ Testimonials Single Block -->
 
 <!-- News block -->
-<div class="block">
+<!-- <div class="block">
     <div class="container">
         <h2 class="text-center h-lg h-decor">Latest Blog</h2>
         <div class="text-center max-700">
@@ -441,7 +632,7 @@
             @endif
         </div>
     </div>
-</div>
+</div> -->
 <!-- /News block -->
 
 @endsection

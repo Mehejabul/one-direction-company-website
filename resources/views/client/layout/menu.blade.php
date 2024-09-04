@@ -12,7 +12,7 @@
                 @endif
             </div>
             <div class="page-header-info">
-                <i class="icon icon-phone"></i>Call: {{ $company->phone }}
+               <a href="tel:{{ $company->phone }}"> <i class="icon icon-phone"></i>Call: {{ $company->phone }}</a>
             </div>
             <div class="page-header-info">
                 <i class="icon icon-speech-bubble"></i><a
@@ -34,7 +34,7 @@
             </ul>
         </div>
     </div>
-    <div class="page-header-topline" style="background-image: url({{ asset('services/images/custom_images/header_background.jfif') }})">
+    <div class="page-header-topline">
         <div class="container">
             <div class="page-header-mobile-info-toggle"></div>
             <div class="page-header-topline-left">
@@ -48,7 +48,7 @@
                     @endif
                 </div>
                 <div class="page-header-info">
-                    <i class="icon icon-phone"></i>Call: {{ $company->phone }}
+                    <a href="tel:{{ $company->phone }}"><i class="icon icon-phone"></i>Call: {{ $company->phone }}</a>
                 </div>
             </div>
             <div class="page-header-topline-right">
@@ -98,6 +98,9 @@
                         <li class="{{ request()->is('blog-page/*') ? 'active' : '' }}"><a href="{{ route('blog-page.index') }}">Blog<span class="arrow"></span></a>
                         </li>
                         <li class="{{ request()->is('contact-page') ? 'active' : '' }}"><a href="{{ route('client.contact-page') }}">Contacts</a></li>
+                        <li>
+                        
+                        </li>
                         @if (Auth::guard('web')->user())
                             <li> <a href="{{ route('dashboard') }}">Dashboard</a></li>
                         @endif
@@ -106,14 +109,8 @@
                 </div>
             </div>
             <div class="page-header-top-right">
-                <div class="header-search">
-                    <div class="header-search-toggle"><i class="icon-search"></i></div>
-                    <div class="header-search-drop">
-                        <form action="#" class="form-inline">
-                            <input type="text" placeholder="Search">
-                            <button type="submit"><i class="icon-search"></i></button>
-                        </form>
-                    </div>
+            <div class="quote-button-wrap">
+                    <a href="{{ route('order-page.index') }}" class="btn"><i class="icon icon-bell"></i>Get a Quote</a>
                 </div>
                 <a href="" class="menu-toggle"><i class="icon-menu"></i><i class="icon-cancel2"></i></a>
             </div>

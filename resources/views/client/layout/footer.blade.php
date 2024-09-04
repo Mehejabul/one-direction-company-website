@@ -1,6 +1,6 @@
 <!-- Footer -->
 	<!-- style="background-color: #24AAA3;" -->
-	<footer class="page-footer page-footer--style2" style="background-image: url({{ asset('services/images/custom_images/header_background.jfif') }});">
+	<footer class="page-footer page-footer--style2">
 		<div class="container">
 			<div class="page-footer-content row">
 				<div class="col-sm-4">

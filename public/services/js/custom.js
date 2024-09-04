@@ -1314,3 +1314,63 @@
 	}
 	// END FUNCTIONS
 })(jQuery);
+
+
+
+// custom banner
+
+$(document).ready(function(){
+	$('.slider_banner').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		arrows: false,
+		dots: false
+	});
+});
+
+//custom your text javascript
+
+document.addEventListener('DOMContentLoaded', function() {
+	const textInput = document.getElementById('text-input');
+	const fontSelect = document.getElementById('font-select');
+	const sizeSelect = document.getElementById('size-select');
+	const colorPicker = document.getElementById('color-picker');
+	const shapeSelect = document.getElementById('shape-select');
+	const boxSizeSelect = document.getElementById('box-size-select');
+	const alignmentSelect = document.getElementById('alignment-select');
+	const contrastSelect = document.getElementById('contrast-select');
+	const previewText = document.getElementById('preview-text');
+	const previewBox = document.getElementById('preview-box');
+
+	function updatePreview() {
+		previewText.style.fontFamily = fontSelect.value;
+		previewText.style.fontSize = sizeSelect.value + 'px';
+		previewText.style.color = colorPicker.value;
+		previewText.style.textAlign = alignmentSelect.value;
+		previewText.textContent = textInput.value || 'Your text preview will appear here';
+
+		previewBox.className = 'preview-box';
+
+		// Apply selected shape
+		if (shapeSelect.value !== 'none') {
+			previewBox.classList.add(shapeSelect.value);
+		}
+
+		// Update contrast plate
+		previewBox.style.backgroundColor = contrastSelect.value !== 'none' ? contrastSelect.value : '#f1f1f1';
+	}
+
+	textInput.addEventListener('input', updatePreview);
+	fontSelect.addEventListener('change', updatePreview);
+	sizeSelect.addEventListener('change', updatePreview);
+	colorPicker.addEventListener('input', updatePreview);
+	shapeSelect.addEventListener('change', updatePreview);
+	boxSizeSelect.addEventListener('change', updatePreview);
+	alignmentSelect.addEventListener('change', updatePreview);
+	contrastSelect.addEventListener('change', updatePreview);
+
+	updatePreview();
+});
